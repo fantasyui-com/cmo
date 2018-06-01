@@ -1,6 +1,6 @@
 {
   "name": "cmo",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Utility used to change color model in a Cascading Stylesheet [CLI, CSS]",
   "main": "index.js",
   "bin": {
