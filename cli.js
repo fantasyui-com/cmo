@@ -20,8 +20,8 @@ program
   .option('-i, --input [url]', 'Url or path of file to use as input.')
   .option('-o, --output [file]', 'path to output file, if not specified STDOUT is used')
 
-  .option('-f, --format [type]', 'HTML color format hex, rgb, hsl, hsv, hwb, cmyk')
-  .option('-d, --debug', 'Put program in debug mode.')
+  .option('-f, --format [type]', 'HTML color format hex, rgb, hsl, hsv, hwb')
+  .option('-d, --debug', 'Increase program verbosity.')
 
   .parse(process.argv);
 
@@ -35,6 +35,11 @@ const bean = {
 }
 
 if(bean.debug) console.log(chalk.yellow(JSON.stringify(bean, null, '  ')));
+
+if(bean.input === bean.output){
+  console.error(chalk.red('Error: ', 'Input and Output cannot be the same.'))
+  process.exit(1);
+}
 
 getit(program.input, function(err, css) {
 
