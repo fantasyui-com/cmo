@@ -22,7 +22,7 @@
   "homepage": "https://github.com/fantasyui-com/cmo#readme",
   "dependencies": {
     "chalk": "^2.4.1",
-    "color": "^3.0.0",
+    "color": "^3.1.2",
     "commander": "^2.15.1",
     "getit": "^1.1.0",
     "squirm": "^1.6.0"
